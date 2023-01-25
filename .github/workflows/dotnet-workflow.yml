@@ -20,7 +20,8 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-    - uses: actions/setup-java@v3
+    - name: Setup Java    
+      uses: actions/setup-java@v3
       with:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '17'  
@@ -31,6 +32,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Echo Jave Version
-      run: chmod -X bash java -version
+      run: chmod +x bash java -version
            JAVA_VERSION=$?
            echo "$JAVA_VERSION"
