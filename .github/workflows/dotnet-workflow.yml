@@ -32,6 +32,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Echo Jave Version
-      run: chmod +x bash java -version
+      run: chmod +x bash java --version
            JAVA_VERSION=$?
            echo "$JAVA_VERSION"
